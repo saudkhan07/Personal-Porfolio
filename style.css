@@ -89,14 +89,15 @@ nav ul li a:hover::after{
 .about-col-2{
     flex-basis: 60%;
 }
-.sub-title{
+.sub-title{ 
     font-size: 60px;
     font-weight: 600;
-    color: white ;
+    color: #fff ;
 }
-tab-titles{
+.tab-titles{
     display: flex;
-    margin: 20%;
+    /* for horizontal alignment */
+    margin: 20px 0 40px;
 }
 .tab-links{
     margin-right: 50px;
@@ -104,4 +105,33 @@ tab-titles{
     font-weight: 500;
     cursor: pointer;
     position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.first::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px;
+}
+.tab-contents span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+    /* it will hide all the tab contents */
+}
+.tab-contents.education{
+    display: block;
+    /* it will show the hidden elements of education */
 }
